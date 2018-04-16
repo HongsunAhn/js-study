@@ -25,9 +25,9 @@ function plusFontSize(id) {
 
 function minusFontSize(id) {
     var fontSize = document.getElementById(id).style.fontSize;
-    var plusFontSizes = parseInt(fontSize);
-    plusFontSizes--;
-    document.getElementById(id).style.fontSize = plusFontSizes + 'px';
+    var minusFontSizes = parseInt(fontSize);
+    minusFontSizes--;
+    document.getElementById(id).style.fontSize = minusFontSizes + 'px';
 }
 
 //2번 과제
