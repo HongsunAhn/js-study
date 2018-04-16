@@ -17,15 +17,18 @@ document.getElementById('minus-btn').addEventListener('click', function() {
 });
 
 function plusFontSize(id) {
-    var fontSize = document.getElementById(id).style.fontSize;
-    var plusFontSizes = parseInt(fontSize);
+    // 현재 폰트 사이즈 값을 구함
+    var fontSize = document.getElementById(id).style.fontSize,
+        // 반환된 폰트 값(문자열)을 숫자로 형변환
+        plusFontSizes = parseInt(fontSize);
+    // 폰트 값 증가
     plusFontSizes++;
     document.getElementById(id).style.fontSize = plusFontSizes + 'px';
 }
 
 function minusFontSize(id) {
-    var fontSize = document.getElementById(id).style.fontSize;
-    var minusFontSizes = parseInt(fontSize);
+    var fontSize = document.getElementById(id).style.fontSize,
+        minusFontSizes = parseInt(fontSize);
     minusFontSizes--;
     document.getElementById(id).style.fontSize = minusFontSizes + 'px';
 }
