@@ -63,3 +63,41 @@ console.log.(obj.full-name, obj['full-name']) // NaN, "ahn hong sun"
 >**NaN (Not a Number)**<br>
 자바스크립트에서 NaN값이 반환될 경우는 수치 연산을 해서 정상적인 값을 얻지 못할 경우에 반환된다.<br>
 
+#### for in 문을 통한 객체의 프로퍼티 순회 및 출력
+for in 문을 사용하면 객체의 모든 프로퍼티를 출력할 수 있다.
+```js
+var obj = {
+    name : 'pubho',
+    age : 27,
+    hobby : 'fishing'
+};
+
+// 프로퍼티의 값을 담을 빈 변수인 key 선언(생략가능하다)
+var key;
+// 객체의 프로퍼티를 하나씩 순회하며 key 변수에 프로퍼티의 이름을 담아 프로퍼티 값들을 출력하고 있다.
+for (key in obj) {
+    console.log('이름(key): ' + key +' , ', '값(value): ' + obj[key] )
+} 
+// 출력 결과
+이름(key): name ,  값(value): pubho
+이름(key): age ,  값(value): 27
+이름(key): hobby ,  값(value): fishing
+```
+
+#### 프로퍼티 삭제
+delete 연산자를 이용해 객체의 프로퍼티를 삭제할 수 있다.<br>
+하지만 **객체 자체를 삭제할 수는 없다**.
+```js
+var obj = {
+    name : 'pubho',
+    age : 27
+};
+console.log(obj.name); // pubho
+delete obj.name;
+console.log(obj.name); // undefined
+
+delete obj; // 객체 삭제 시도
+console.log(obj.age); // 27을 반환, 객체는 삭제되지 않는다는걸 확인할 수 있음
+```
+>자바스크립트는 존재하지 않는 프로퍼티에 접근할 경우 에러를 반환하는 것이아니라 undefined를 반환한다.<br>
+따라서 위 예제에서 obj.name 프로퍼티는 삭제된 것을 확인 할 수있다.

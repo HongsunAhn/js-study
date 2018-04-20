@@ -47,7 +47,7 @@ console.log(typeof emptyVar, typeof undefinedVar); // "undefined", "undefined"
 ```
 ### null 타입
 자바스크립트에서의 null을 값으로 가지는 변수는 **완전히 비어있음**을 나타낸다.
-여기서 오류(?)가 있는데 아래 선언한 nullVar의 typeof결과는 object가 반환된다.
+여기서 오류(?)가 있는데 아래 선언한 nullVar의 typeof결과는 null이 아닌 object가 반환된다.
 따라서 null타입 변수를 확인할 경우에는 일치 연산자(===)를 사용하여 변수의 값을 직접 확인해야 한다.
 ```js
 // null 타입
