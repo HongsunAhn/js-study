@@ -29,10 +29,12 @@ singleQuoteStr[0] = "안"; // 문자열 인덱스에 접근하여 수정 시도
 console.log(singleQuoteStr); // 결과값은 변경되지 않은 "작은따옴표 문자열"
 ```
 ### 불린 타입
+```js
 // 불린 타입
 var trueVar = true;
 var falseVar = false;
 console.log(typeof trueVar, typeof falseVar); // "boolean", "boolean"
+```
 ### undefined 타입
 값이 비어있음을 나타내는 타입이다.
 자바스크립트에서 기본적으로 값이 할당되지 않은 변수는 undefined타입이며, 이 변수가 가지고 있는 값 또한 undefined이다.
