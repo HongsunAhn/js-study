@@ -1,0 +1,20 @@
+.slide-container {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin:0 auto;
+}
+.slide-list {
+    position: relative;
+    margin:0 auto;
+}
+.slide-list:after {
+    content: '';
+    display: table;
+    clear:both;
+}
+.slide-list .slide-item {
+    float: left;
+    width:960px;
+    height:500px;
+}
